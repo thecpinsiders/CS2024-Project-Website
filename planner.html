@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Power Planner | How Long Will RIVER 3 Plus Run My Devices?</title>
+<meta name="description" content="Pick your devices and hours and see how much of one RIVER 3 Plus charge you&#x27;ll use, and whether you need an Extra Battery or solar panel.">
+<meta name="theme-color" content="#F3F0E8">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RIVER 3 Plus: Keep Home Close">
+<meta property="og:title" content="Power Planner | How Long Will RIVER 3 Plus Run My Devices?">
+<meta property="og:description" content="Pick your devices and hours and see how much of one RIVER 3 Plus charge you&#x27;ll use, and whether you need an Extra Battery or solar panel.">
+<meta property="og:image" content="https://images.pexels.com/photos/2526025/pexels-photo-2526025.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=627&amp;fit=crop&amp;w=1200">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="page-planner">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="RIVER 3 Plus, Keep Home Close: home"><span class="brand-dot" aria-hidden="true"></span><span class="brand-name">RIVER 3 Plus</span><span class="brand-tag">Keep home close</span></a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="product.html">Product</a></li><li class="has-menu"><button class="nav-menu-btn" type="button" aria-expanded="false" aria-controls="moments-menu">Moments</button><ul class="submenu" id="moments-menu"><li><a href="outdoors.html"><strong>Outdoors</strong><span>Family camping and road trips</span></a></li><li><a href="work-anywhere.html"><strong>Work Anywhere</strong><span>Laptops, cameras, creators</span></a></li><li><a href="home-backup.html"><strong>Home Backup</strong><span>Outages, routers, CPAP</span></a></li></ul></li><li><a href="planner.html" aria-current="page">Planner</a></li><li><a href="accessories.html">Accessories</a></li><li><a href="journal.html">Journal</a></li><li><a href="faq.html">Support</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-ghost btn-sm" href="contact.html">Get your setup</a>
+        <a class="btn btn-primary btn-sm" data-buy="lazada" data-buy-spot="nav" href="https://www.lazada.sg/products/ecoflow-portable-power-station-river-3-plus-286wh-i3387422043-s22618875001.html" target="_blank" rel="noopener">Buy</a>
+      </div>
+    </nav>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Menu</span><span class="bars" aria-hidden="true"></span></button>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero">
+  <div class="wrap">
+    <div class="split split--wide-left">
+      <div>
+        <span class="eyebrow">Power Planner</span>
+        <h1 class="display">Will it last the night?</h1>
+      </div>
+      <p class="lede">Start from a moment or add your own devices. You'll see how much of one charge you'd use, and which setup fits.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="presets" role="group" aria-label="Start from a moment">
+      <button type="button" class="preset" data-preset="camp" aria-pressed="false">Family camp night</button>
+      <button type="button" class="preset" data-preset="work" aria-pressed="false">Remote workday</button>
+      <button type="button" class="preset" data-preset="outage" aria-pressed="false">Evening outage</button>
+      <button type="button" class="preset" data-preset="cpap" aria-pressed="false">CPAP night</button>
+      <button type="button" class="preset" data-preset="clear" aria-pressed="false">Clear all</button>
+    </div>
+
+    <div class="planner">
+      <div>
+        <ul class="device-list" id="planner-list" aria-label="Devices"></ul>
+        <p class="small muted mt-5">Wattages are typical values. For a closer estimate, check the label on your device for W, or multiply volts by amps.</p>
+        <noscript><p class="note">The Power Planner needs JavaScript. As a rule of thumb, divide 243 by your device's watts to get hours.</p></noscript>
+      </div>
+
+      <aside class="result" aria-labelledby="result-label">
+        <span class="eyebrow" id="result-label">Your plan uses</span>
+        <p class="result-big" id="plan-total">0<small> Wh</small></p>
+        <div class="meter" id="plan-meter" role="meter" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Share of one charge"><span></span></div>
+        <div class="meter-legend"><span id="plan-pct">of about 243 Wh usable</span><span>one charge</span></div>
+        <p class="verdict" id="plan-verdict" aria-live="polite"></p>
+        <p class="warn" id="plan-warn" aria-live="polite"></p>
+        <div class="btn-row">
+          <a class="btn btn-primary" data-buy="lazada" data-buy-spot="planner" href="https://www.lazada.sg/products/ecoflow-portable-power-station-river-3-plus-286wh-i3387422043-s22618875001.html" target="_blank" rel="noopener">Buy RIVER 3 Plus</a>
+          <a class="btn btn-ghost" id="plan-send" href="contact.html">Send me this setup</a>
+        </div>
+        <p class="assume">Based on 286Wh &times; 85% usable after conversion losses. Estimates only; real results depend on your devices and conditions.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section section--stone">
+  <div class="wrap">
+    <div class="split split--top">
+      <div>
+        <span class="eyebrow">How we calculate</span>
+        <h2 class="h2">The maths, in one line.</h2>
+      </div>
+      <div>
+        <p class="scene" style="font-size:clamp(22px,2.6vw,32px)">Hours &asymp; 286 Wh &times; 0.85 &divide; device watts</p>
+        <p class="muted mt-5">Example: a 45 W standing fan gives 286 &times; 0.85 &divide; 45 &asymp; 5.4 hours. We use 85% because converting battery power to 230V AC loses some energy as heat. USB devices are usually a little more efficient, so treat these numbers as a safe floor.</p>
+        <ul class="facts mt-6">
+          <li><span class="k">Up to 243 Wh</span><div class="v"><strong>RIVER 3 Plus</strong><p>286Wh battery. Most weekend trips, workdays and evening outages.</p></div></li>
+          <li><span class="k">Up to 486 Wh</span><div class="v"><strong>RIVER 3 Max</strong><p>With Extra Battery 300 (572Wh). Two nights out, or a full night of CPAP with margin.</p></div></li>
+          <li><span class="k">Up to 729 Wh</span><div class="v"><strong>RIVER 3 Max Plus</strong><p>With Extra Battery 600 (858Wh). Long road trips and longer outages.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band section section--tight" aria-labelledby="cta-buy">
+  <div class="wrap">
+    <div><h2 class="h2" id="cta-buy">Ready when you are.</h2><p>RIVER 3 Plus ships from the official listings on Lazada and Shopee, with the vouchers and delivery you already use.</p></div>
+    <div class="btn-row"><a class="btn btn-primary" data-buy="lazada" data-buy-spot="cta" href="https://www.lazada.sg/products/ecoflow-portable-power-station-river-3-plus-286wh-i3387422043-s22618875001.html" target="_blank" rel="noopener">Buy on Lazada</a><a class="btn btn-ghost" data-buy="shopee" data-buy-spot="cta" href="https://shopee.sg/search?keyword=ecoflow%20river%203%20plus" target="_blank" rel="noopener">Buy on Shopee</a></div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="index.html"><span class="brand-dot" aria-hidden="true"></span><span class="brand-name">RIVER 3 Plus</span><span class="brand-tag">Keep home close</span></a>
+      <p class="footer-line">The comfort comes with you.</p>
+      <p>EcoFlow RIVER 3 Plus is sold through its official Lazada and Shopee listings. This site helps you choose; the marketplace handles payment and delivery.</p>
+    </div>
+    <div class="footer-col">
+      <h2>Product</h2>
+      <ul><li><a href="product.html">RIVER 3 Plus</a></li><li><a href="specs.html">Tech specs</a></li><li><a href="accessories.html">Accessories</a></li><li><a href="planner.html">Power Planner</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h2>Moments</h2>
+      <ul><li><a href="outdoors.html">Outdoors</a></li><li><a href="work-anywhere.html">Work anywhere</a></li><li><a href="home-backup.html">Home backup</a></li><li><a href="journal.html">Journal</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h2>Help</h2>
+      <ul><li><a href="faq.html">FAQ and support</a></li><li><a href="contact.html">Get your setup</a></li><li><a class="" data-buy="lazada" data-buy-spot="footer" href="https://www.lazada.sg/products/ecoflow-portable-power-station-river-3-plus-286wh-i3387422043-s22618875001.html" target="_blank" rel="noopener">Lazada listing</a></li><li><a class="" data-buy="shopee" data-buy-spot="footer" href="https://shopee.sg/search?keyword=ecoflow%20river%203%20plus" target="_blank" rel="noopener">Shopee listing</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h2>About</h2>
+      <ul><li><a href="team.html">Our team</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </div>
+  </div>
+  <div class="wrap footer-legal">
+    <p>&copy; <span data-year>2026</span> Kindling Studio. A student project for a university web design module, presented as a proposal for the seller. Not affiliated with or endorsed by EcoFlow; EcoFlow and RIVER are trademarks of their owner. Specifications come from public spec sheets. Lifestyle photos from Pexels. Confirm details on the official listing before you buy.</p>
+    <p><a href="privacy.html">Privacy</a> &middot; <a href="team.html">Team</a></p>
+  </div>
+</footer>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/planner.js" defer></script>
+</body>
+</html>
