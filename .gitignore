@@ -1,0 +1,45 @@
+# OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Claude and AI design tooling (local only)
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+.impeccable/
+PRODUCT.md
+DESIGN.md
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+secrets.*
+credentials.*
+.netrc
+.npmrc
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Dependencies, builds and logs
+node_modules/
+dist/
+build/
+.cache/
+*.log
+npm-debug.log*
