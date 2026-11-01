@@ -41,7 +41,7 @@
       menu.hidden = open;
     });
     document.addEventListener("click", function (e) { if (!menu.contains(e.target)) close(); });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape") { close(); btn.focus(); } });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !menu.hidden) { close(); btn.focus(); } });
   });
 
   /* ---------- Footer year ---------- */

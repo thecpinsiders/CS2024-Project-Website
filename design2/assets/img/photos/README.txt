@@ -1,2 +1,3 @@
-Run get-photos.bat (Windows) or get-photos.sh (Mac) in the main folder to fill this folder with the stock photos.
-If it stays empty, the site loads the same photos from Unsplash instead.
+These stock photos are saved in the repo, so the site works offline and on any host.
+get-photos.sh / get-photos.bat can re-download them from Unsplash if a file goes missing.
+If a photo is missing, the page shows the matching illustration from assets/img instead.

@@ -29,16 +29,14 @@ A 12-page static sales website (HTML, CSS, JavaScript) for the EcoFlow RIVER 3 P
 
 ## Images
 
-Every image is linked directly from its source, so nothing needs uploading:
+Every image is saved in `assets/img/photos/`, so the site works offline and can't break if a listing changes. Fonts are self-hosted in `assets/fonts/`.
 
-- **Product and accessory photos** come from the RIVER 3 Plus Lazada listing and EcoFlow's Lazada listings for the Extra Batteries and 220W solar panel (`img.lazcdn.com`).
-- **Lifestyle photos** come from Pexels (free licence, no attribution required, credited in the footer anyway):
+- **Product and accessory photos** (`lazada-*.webp`) come from the RIVER 3 Plus Lazada listing and EcoFlow's Lazada listings for the Extra Batteries and 220W solar panel.
+- **Lifestyle photos** (`pexels-*.jpg`) come from Pexels (free licence, no attribution required, credited in the footer anyway):
   - Night tents: Matthew DeVries · Father and children in tent: Kampus Production
   - Laptop with sea view: mark chaves · Videographer on beach: Kyle Loftus
   - Lamp in dark room: George Shervashidze · Family picnic: Nataliya Vaitkevich
   - Tent by the sea: Mengliu Di · Desk lamp with bookshelves: Feyza Nur · Laptop on grass: Picography
-
-**Safer for submission:** linked images can break if a listing changes. To lock them in, open each image URL (search the HTML for `img.lazcdn.com` and `images.pexels.com`), save it into `assets/img/`, and change the `src` to the local file. The original placeholder file names are still noted inside each image's hidden label.
 
 ## Publish on GitHub Pages
 
