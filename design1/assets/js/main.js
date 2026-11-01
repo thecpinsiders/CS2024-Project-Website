@@ -120,9 +120,19 @@
         pick on the marketplace listing.
      --------------------------------------------------------------- */
   var optNote = document.querySelector('[data-option-note]');
+  // Bundles have no single listing link, so Max and Max Plus open a marketplace search
+  var VARIANT_SEARCH = { max: 'ecoflow river 3 max', maxplus: 'ecoflow river 3 max plus' };
   document.querySelectorAll('input[name="setup"]').forEach(function (input) {
     input.addEventListener('change', function () {
       if (optNote) optNote.textContent = input.dataset.note || '';
+      var q = VARIANT_SEARCH[input.value];
+      document.querySelectorAll('[data-buybar-anchor] [data-buy], .buybar [data-buy]').forEach(function (a) {
+        var key = a.getAttribute('data-buy');
+        var url = !q ? BUY_LINKS[key]
+          : key === 'lazada' ? 'https://www.lazada.sg/catalog/?q=' + encodeURIComponent(q)
+          : 'https://shopee.sg/search?keyword=' + encodeURIComponent(q);
+        a.href = withUtm(url, page + '_' + (a.dataset.buySpot || 'panel') + '_' + input.value);
+      });
     });
   });
 

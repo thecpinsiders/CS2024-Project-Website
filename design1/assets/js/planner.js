@@ -142,7 +142,7 @@
 
     var warn = [];
     if (peak > RATED_W) warn.push('Running all of these at the same time draws about ' + peak + ' W. RIVER 3 Plus is rated 600 W, so stagger the bigger devices.');
-    if (hasBoost) warn.push('Kettles and other heating appliances up to 1200 W run in X-Boost mode. Run them on their own; UPS backup is off while X-Boost is in use.');
+    if (hasBoost) warn.push('Kettles and other heating appliances up to 1200 W run in X-Boost mode. Run them on their own; they heat more slowly than on the wall.');
     elWarn.textContent = warn.join(' ');
     elWarn.classList.toggle('is-visible', warn.length > 0);
 
