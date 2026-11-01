@@ -523,3 +523,15 @@ h3, .h3 { font-size: 21px; font-weight: 700; line-height: 1.25; letter-spacing: 
   .hero .label__prod img { width: 42%; }
 }
 @media (prefers-reduced-motion: reduce) { .hero .rate .rate__bar { animation: none; } }
+
+/* Calculator: X-Boost option for custom devices */
+.custom__boost { grid-column: 1 / -1; font-size: 14px; }
+/* Phones: pinned mini-total under the device buttons */
+.calc__mini { display: none; }
+@media (max-width: 960px) {
+  .calc__mini { display: flex; align-items: baseline; gap: 12px; position: sticky; bottom: 0; z-index: 5; margin-top: 16px; padding: 12px 16px; background: var(--green); color: var(--on-green); }
+  .calc__mini b { font-family: var(--font-display); font-stretch: var(--cond); font-weight: 800; font-size: 26px; margin-left: 6px; white-space: nowrap; }
+  .calc__mini span { white-space: nowrap; }
+  .calc__mini span:nth-child(2) { color: var(--on-green-2); font-size: 14px; }
+  .calc__mini a { margin-left: auto; font-weight: 700; font-size: 14px; white-space: nowrap; }
+}

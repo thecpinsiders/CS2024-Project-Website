@@ -140,6 +140,16 @@
     }
     elVerdict.innerHTML = msg;
 
+    // The Buy button follows the verdict: bundles have no single listing, so they open a search
+    var buy = document.querySelector('.result [data-buy-spot="planner"]');
+    if (buy) {
+      if (!buy.dataset.plusHref) buy.dataset.plusHref = buy.href;
+      var size = total > MAX ? 'RIVER 3 Max Plus' : total > USABLE ? 'RIVER 3 Max' : 'RIVER 3 Plus';
+      buy.textContent = size === 'RIVER 3 Plus' ? 'Buy RIVER 3 Plus' : 'Find ' + size + ' on Lazada';
+      buy.href = size === 'RIVER 3 Plus' ? buy.dataset.plusHref
+        : 'https://www.lazada.sg/catalog/?q=' + encodeURIComponent('ecoflow ' + size.toLowerCase()) + '&utm_source=website&utm_medium=referral&utm_campaign=keep_home_close&utm_content=planner_' + size.replace(/\W+/g, '_').toLowerCase();
+    }
+
     var warn = [];
     if (peak > RATED_W) warn.push('Running all of these at the same time draws about ' + peak + ' W. RIVER 3 Plus is rated 600 W, so stagger the bigger devices.');
     if (hasBoost) warn.push('Kettles and other heating appliances up to 1200 W run in X-Boost mode. Run them on their own; they heat more slowly than on the wall.');

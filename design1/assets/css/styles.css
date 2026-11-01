@@ -662,7 +662,10 @@ figcaption { font-size: 14px; color: var(--graphite); margin-top: var(--s3); }
   .stepper button { width: 44px; height: 44px; }
   /* Planner: the total stays in view while you change devices */
   .result { position: sticky; top: auto; bottom: 0; z-index: 5; border-radius: var(--radius) var(--radius) 0 0; padding: 14px 18px 16px; }
-  .result .eyebrow, .result .btn-row, .result .assume, .result .meter-legend { display: none; }
+  .result .eyebrow, .result .assume, .result .meter-legend { display: none; }
+  /* Keep the path to buying: compact buttons in the pinned bar */
+  .result .btn-row { margin-top: 10px; gap: 8px; flex-wrap: nowrap; }
+  .result .btn-row .btn { padding: 8px 14px; font-size: 14px; white-space: nowrap; }
   .result-big { font-size: 40px; }
   .result .verdict { margin: 6px 0 0; font-size: 14px; }
 }

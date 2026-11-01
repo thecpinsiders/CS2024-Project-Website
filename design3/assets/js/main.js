@@ -36,6 +36,8 @@
     var warn = document.getElementById('calc-warn');
     var live = document.getElementById('calc-live');
     var rows = [];
+    var miniH = document.getElementById('mini-h');
+    var miniN = document.getElementById('mini-n');
 
     var hoursFor = function (w) { return (CAPACITY * USABLE) / w; };
     // X-Boost lowers the voltage so a heater draws no more than the rated output.
@@ -88,12 +90,16 @@
       if (over && boost) msgs.push('Run the heating appliance on its own. In X-Boost it uses the full 600 W, so nothing else fits alongside it.');
       else if (over) msgs.push('That’s more than the 600 W rated output, so these can’t all run at once. Remove a device to see a runtime.');
       else if (boost) msgs.push('X-Boost runs heating appliances up to 1,200 W at a lower voltage, so they heat more slowly.');
+      if (rows.length >= MAX_ROWS) msgs.push('The label is full at eight devices. Remove one to add another.');
       warn.textContent = msgs.join(' ');
       warn.classList.toggle('is-on', msgs.length > 0);
+      // Phones: a pinned mini-total so each tap shows a result without scrolling
+      miniH.textContent = totalH.textContent;
+      miniN.textContent = rows.length + (rows.length === 1 ? ' device' : ' devices');
     };
 
     var add = function (name, w, boost) {
-      if (rows.length >= MAX_ROWS) { live.textContent = 'The label holds eight devices. Remove one to add another.'; return; }
+      if (rows.length >= MAX_ROWS) { render(); live.textContent = 'The label is full at eight devices. Remove one to add another.'; return; }
       var id = Date.now() + Math.random();
       rows.push({ id: id, name: name, w: w, boost: !!boost });
       render(id);
@@ -112,9 +118,11 @@
       var n = custom.elements['c-name'].value.trim() || 'My device';
       var w = Math.round(Number(custom.elements['c-w'].value));
       var fld = custom.querySelector('.fld--w');
-      if (!w || w < 1 || w > 1200) { fld.classList.add('is-invalid'); custom.elements['c-w'].focus(); return; }
-      fld.classList.remove('is-invalid');
-      add(n.slice(0, 40), w, false);
+      var wInput = custom.elements['c-w'];
+      var boostOn = custom.elements['c-boost'].checked;
+      if (!w || w < 1 || w > 1200) { fld.classList.add('is-invalid'); wInput.setAttribute('aria-invalid', 'true'); wInput.focus(); return; }
+      fld.classList.remove('is-invalid'); wInput.removeAttribute('aria-invalid');
+      add(n.slice(0, 40), w, boostOn);
       custom.reset();
     });
 

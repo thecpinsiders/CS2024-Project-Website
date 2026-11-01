@@ -47,8 +47,10 @@
       <form class="custom" id="custom-form" novalidate>
         <div class="fld"><label for="c-name">Something else <span class="opt">(optional name)</span></label><input id="c-name" name="c-name" maxlength="40" placeholder="e.g. Rice cooker"></div>
         <div class="fld fld--w"><label for="c-w">Watts</label><input id="c-w" name="c-w" type="number" inputmode="numeric" min="1" max="1200" placeholder="e.g. 60" aria-describedby="c-w-err"><span class="err" id="c-w-err">Enter 1 to 1200 watts.</span></div>
+        <label class="check custom__boost"><input type="checkbox" name="c-boost"><span>It’s a heater or kettle (runs in X&#8209;Boost)</span></label>
         <button class="btn" type="submit">Add <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button>
       </form>
+      <div class="calc__mini" id="calc-mini" aria-hidden="true"><span>All together <b id="mini-h">–</b></span><span id="mini-n"></span><a href="#calc-title" tabindex="-1">See label</a></div>
       <div class="prose mt-l">
         <h2>How we work it out</h2>
         <p>RIVER 3 Plus stores 286&nbsp;Wh<a class="src" href="specs.html#src-1" aria-label="Source 1">1</a>. Converting that to AC power loses some energy as heat, so we assume 85% is usable: <strong>286 × 0.85 ÷ watts = hours</strong>. Real results depend on the device, the temperature and how hard it’s working.</p>
