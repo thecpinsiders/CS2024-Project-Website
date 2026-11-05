@@ -494,6 +494,8 @@ fieldset { border: 0; padding: 0; margin: 0; }
 .site-footer { background: var(--black); color: var(--mist); padding: 64px 0 32px; font-size: .95rem; }
 .site-footer a { color: #fff; text-decoration: none; }
 .site-footer a:hover { color: var(--orange); }
+/* Buttons keep their own colours inside the footer (dark text on orange, 6.6:1) */
+.site-footer .btn, .site-footer .btn:hover { color: var(--black); }
 .footer__top { display: grid; gap: 24px; align-items: center; padding-bottom: 40px; margin-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); }
 @media (min-width: 900px) { .footer__top { grid-template-columns: 1fr auto; } }
 .footer__top h2 { color: #fff; font-size: clamp(1.8rem, 3vw, 2.6rem); margin: 0; }
