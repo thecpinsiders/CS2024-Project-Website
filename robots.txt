@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /CS2024-Project-Website/archive/
+Sitemap: https://thecpinsiders.github.io/CS2024-Project-Website/sitemap.xml
