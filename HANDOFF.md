@@ -4,7 +4,7 @@ Last updated: 12 November 2026 (Malaysia update). The live site still shows the 
 
 ## In one paragraph
 
-This is a university web design assignment. It's a product website (not a store) for the **EcoFlow RIVER 3 Plus** portable power station, aimed at **Malaysia**. Every Buy button sends people to a Lazada Malaysia or Shopee Malaysia search. The brief's goal is +20% marketplace sales in 3 months. The team, "Bluehour Studio", compared three designs and chose **Design 2 ("Bluehour", tagline "Stay a little longer")**. It's live on GitHub Pages and there's an 18-slide pitch deck alongside it.
+This is a university web design assignment. It's a product website (not a store) for the **EcoFlow RIVER 3 Plus** portable power station, aimed at **Malaysia**. Every Buy button sends people to a Lazada Malaysia or Shopee Malaysia search. The brief's goal is +20% marketplace sales in 3 months. The team, "Bluehour Studio", compared three designs and chose **Design 2 ("Bluehour", tagline "Stay a little longer")**. It's live on GitHub Pages and there's a 20-slide pitch deck alongside it.
 
 ## Links and people
 
@@ -43,7 +43,7 @@ assets/img/photos/                Unsplash lifestyle photos (saved locally)
 assets/img/product/               EcoFlow product photos (UK product shot + Lazada listing crops)
 sitemap.xml, robots.txt           SEO files, pointing at the live address
 archive/                          Designs 1 and 3, plus a page linking all three (all noindex)
-Bluehour-Pitch-Deck.pptx          The 18-slide pitch deck
+Bluehour-Pitch-Deck.pptx          The 20-slide pitch deck
 Design-Review-Changes.docx        Change log for the team (the only one)
 README.md, IMAGES.md              Design 2's own notes on pages, deploying and photos
 HANDOFF.md                        This file
@@ -70,7 +70,7 @@ Kept local only (git-ignored): `PRODUCT.md`, `.impeccable/` (design-tool notes, 
 
 **Runtime calculator:** you pick a moment or set hours per device (with the buttons or by typing), and it shows the % of one charge used and a verdict. The maths is 286 Wh × 85% ≈ 243 Wh usable, and watts × hours = energy used. An X-Boost kettle counts as about 600 W. The plan is saved in the page address (`?h=router-6,laptop-1.5`) and can be shared with "Copy link to this plan". On phones the result stays pinned to the bottom of the screen.
 
-## The pitch deck (18 slides, about 10–11 minutes, speaker notes on every slide)
+## The pitch deck (20 slides, about 12 minutes, speaker notes on every slide)
 
 1. Title
 2. The opportunity (market research)
@@ -88,8 +88,10 @@ Kept local only (git-ignored): `PRODUCT.md`, `.impeccable/` (design-tool notes, 
 14. **SEO**
 15. **Website marketing strategy**
 16. Revenue streams beyond the first sale (protection plan, rentals, stall plans, bundles, trade-in)
-17. How we prove the +20%
-18. Close, with the live link
+17. Making it easier to say yes (price, calculator pick, comparison, less risk, phone bar, offers)
+18. New buyers the site now speaks to (night markets, medical users, crews, flood-prone towns, gifts, partner campsites)
+19. How we prove the +20%
+20. Close, with the live link
 
 Malaysia update (12 Nov 2026): slides 2, 4, 7, 8, 11–15 and 17 were edited in place (the slide XML, not regenerated), slide 16 was added, and the two calculator screenshots on slide 13 had their preset button relabelled "A night by the river". Slide 2 now uses TMO Group's December 2024 traffic (Shopee MY about 57M visits a month, Lazada MY about 12M), The Star (Dec 2023) on fully booked campsites and Standard Insights (2024) on 55% preferring hybrid work.
 
@@ -105,7 +107,7 @@ Bold items are the nine the brief requires.
 
 ## Decisions worth keeping
 
-- **No prices anywhere.** Marketplace prices change with every campaign, so the site links to the listing instead.
+- **Prices are shown, dated** (changed 12 Nov 2026 after feedback): "From RM 2,099 at EcoFlow Malaysia · checked 12 Nov 2026", next to "check today's price" links. Bundles: + extra battery about RM 2,999 (RM 900 battery), + 110W solar RM 2,799. Re-check before presenting. Proposed services still show no prices.
 - **Only sourced claims.** Unverified specs were removed: IP ratings, "40 protections", exact AC input watts, certification marks. Keep it that way.
 - **Medical equipment, stated honestly:**
   - A CPAP machine runs about 10–24 h with the humidifier off, or about 4.5 h with it on.
@@ -114,8 +116,13 @@ Bold items are the nine the brief requires.
 - **Malaysian storefront links** are searches (lazada.com.my, shopee.com.my). EcoFlow Malaysia's site suggests the "ECOFLOW Official Store" marketplace listings aren't run by EcoFlow Malaysia, so the copy tells buyers to pick EcoFlow or an authorised reseller.
 - **Warranty wording:** EcoFlow Malaysia lists 2 years on the RIVER 3 Plus page (its general terms say 24 months unit / 60 months battery), and resellers such as CT Hardware advertise 5 years. The site says "local warranty" and explains the range; don't put back a flat "5-year" claim.
 - **SIRIM:** only a general EcoFlow Malaysia statement ("certified by SIRIM QAS and Suruhanjaya Tenaga") was found, with no certificate naming RIVER 3 Plus. So the badge is a buyer check ("Look for the ST-SIRIM label"), not a certification claim. The big seal (`assets/img/safety-mark.svg`, our own design, not the official ST-SIRIM label artwork) sits in a band under the spec strip on Tech specs and in the Where to buy safety section. Smaller mentions are in the home trust strip, by the product page buy buttons, in the specs warranty card and in the FAQ.
+- **Model comparison** (`specs.html#compare-models`): River 3 UPS vs River 3 Plus vs Jackery Explorer 300 Plus, from ecoflow.com.my and my.jackery.com (12 Nov 2026). Jackery's page lists two cycle counts (1,500 and 3,000) and no RM price; the table says so.
+- **Calculator pick:** after devices are entered it names the smallest kit that covers the plan (Essential, + extra battery, + 2 batteries, or a larger station) with price and a Buy on Lazada link. Logic in `assets/js/main.js` (`PICKS`).
+- **Phones:** `main.js` adds a sticky "Shop now" bar on every page except where-to-buy, get-the-kit, 404 and pages with their own bar; the cookie banner is compact on phones.
+- **Proposed offers** on `services.html`: rent-first with the fee deducted, free gift instead of a discount, referral vouchers, festive and company gifts, business package, partner campsites and roadshows, flood-ready group orders. All labelled as proposals.
+- **Journal buyer guides:** best power station for camping, Wi-Fi in a blackout, vs a generator, CPAP.
 - **Services on the product page:** `river-3-plus.html#own-it-longer` links to Care, rentals and trade-in.
-- **Reviews are samples.** They're labelled as written by the team, with no rating schema, so search engines don't treat them as real.
+- **No written reviews.** The sample testimonials were removed after feedback. `reviews.html` links to real Lazada/Shopee ratings and proposes the #StayALittleLonger photo contest. To show the real rating and "sold" count, copy them from the listing into the commented slot in `reviews.html`.
 - **Services are proposals.** Marked "Proposed services", with no prices; "Register interest" goes to the kit form.
 
 ## Sources behind the numbers
@@ -143,7 +150,7 @@ Bold items are the nine the brief requires.
 
 - **Performance:** scores 74–100 on mobile, held back by the large photos. Compressing them or serving WebP would help. SEO and accessibility are unaffected.
 - **robots.txt:** Google only reads it at the domain root (thecpinsiders.github.io/robots.txt), so the repo's copy is ignored. The archive is kept out of search with `noindex` tags instead.
-- **Group number:** "Group X" is deliberate. If the real group number is needed, change it in `team.html` (3 places) and on deck slides 1 and 18.
+- **Group number:** "Group X" is deliberate. If the real group number is needed, change it in `team.html` (3 places) and on deck slides 1 and 20.
 - **Form:** demo only. To receive real submissions, see "Making the form actually send" in `README.md`.
 - **Change log:** `Design-Review-Changes.docx` doesn't list the last small fixes or the Malaysia update. Nothing in the brief requires them to be logged.
 - **Bahasa Malaysia summary** on `privacy.html#bm` is written in plain formal Malay, but no native speaker has checked it yet.

@@ -642,14 +642,6 @@ fieldset { border: 0; padding: 0; margin: 0; }
 /* Safety mark seal (specs.html band, where-to-buy.html#safety-mark) */
 .safety-mark__eyebrow { font: 700 .75rem/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
 
-/* Reviews (reviews.html) */
-.reviews { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
-@media (min-width: 760px) { .reviews { grid-template-columns: repeat(2, 1fr); } }
-.review { margin: 0; height: 100%; display: flex; flex-direction: column; gap: 14px; background: var(--white); border: 1px solid var(--line); border-radius: var(--r-lg); padding: clamp(24px, 3vw, 32px); }
-.review blockquote { margin: 0; font-size: var(--fs-lead); line-height: 1.45; }
-.review figcaption { margin-top: auto; color: var(--muted); font-size: var(--fs-small); }
-.review figcaption strong { display: block; color: var(--black); font-size: var(--fs-body); }
-.stars { color: var(--orange-ink); letter-spacing: .12em; margin: 0; }
 .nowrap { white-space: nowrap; }
 .safety-seal { width: clamp(120px, 14vw, 160px); height: auto; flex: none; margin-bottom: 16px; filter: drop-shadow(0 10px 24px rgba(0,0,0,.25)); }
 .safety-band { background: var(--black); color: #fff; border-top: 1px solid rgba(255,255,255,.08); padding-block: clamp(28px, 4vw, 44px); }
@@ -660,3 +652,42 @@ fieldset { border: 0; padding: 0; margin: 0; }
 .safety-band .safety-mark__eyebrow { color: var(--orange); }
 .safety-band .text-link { color: #fff; }
 .store__img--contain { object-fit: contain; background: #fff; padding: 4%; }
+
+/* Calculator pick (runtime-calculator.html) */
+.calc__pick { margin: 4px 0 14px; padding: 16px; border-radius: var(--r-md); background: var(--coal); border: 1px solid rgba(255,255,255,.12); }
+.calc__pick[hidden], #shop-all[hidden] { display: none; }
+.calc__pick-label { margin: 0; font: 700 .75rem/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--orange); }
+.calc__pick-name { margin: 8px 0 4px; font-family: var(--display); font-size: 1.6rem; font-weight: 800; line-height: 1.05; text-transform: uppercase; }
+.calc__pick-price { margin: 0 0 12px; font-size: .9rem; color: var(--mist); }
+.calc__pick-alt { margin: 10px 0 0; font-size: .9rem; }
+.calc__pick-alt a { color: #fff; }
+@media (max-width: 979px) {
+  .calc__pick { margin: 8px 0 0; padding: 10px 12px; background: none; border: 0; padding-inline: 0; }
+  .calc__pick-label, .calc__pick-price, .calc__pick-alt { display: none; }
+  .calc__pick-name { font-size: 1.15rem; margin: 0 0 8px; }
+  .calc__pick .btn { padding-block: 10px; }
+}
+
+/* Price and rent-first lines near buy buttons */
+.price-line { margin: 0 0 14px; font-size: var(--fs-small); color: var(--muted); max-width: 60ch; }
+.price-line strong { display: block; font-family: var(--display); font-size: 1.9rem; line-height: 1.1; color: var(--black); text-transform: uppercase; }
+.price-line--tight { margin-top: 14px; }
+.rent-first { margin: 12px 0 0; font-size: .95rem; }
+.section-head + .price-line { margin-top: -8px; }
+.price-line + .rent-first { margin: 0 0 24px; }
+
+/* Phones: sticky Shop now bar (added by main.js) and a compact cookie banner */
+.phone-buybar { display: none; }
+@media (max-width: 759px) {
+  .phone-buybar { display: flex; align-items: center; justify-content: space-between; gap: 12px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 80; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: var(--black); color: #fff; box-shadow: 0 -8px 24px rgba(0,0,0,.18); }
+  .phone-buybar p { margin: 0; line-height: 1.2; }
+  .phone-buybar strong { display: block; font-family: var(--display); font-size: 1.15rem; text-transform: uppercase; }
+  .phone-buybar span { font-size: .8rem; color: var(--mist); }
+  body.has-phone-buybar { padding-bottom: 64px; }
+  .consent-banner { left: 8px; right: 8px; bottom: 8px; padding: 10px 12px; font-size: .8rem; line-height: 1.4; display: flex; align-items: center; gap: 10px; }
+  .has-phone-buybar .consent-banner { bottom: 72px; }
+  .consent-banner p { margin: 0; flex: 1; }
+  .consent-banner .actions { flex-direction: row; flex: none; flex-wrap: nowrap; }
+  .consent-banner .btn { padding: 8px 10px; font-size: .72rem; }
+  .consent-more { display: none; }
+}

@@ -118,7 +118,14 @@
       <p class="calc__msg" id="msg">Add the things you'd bring. We'll do the maths.</p>
       <button type="button" class="btn btn--ghost btn--block calc__share" id="share">Copy link to this plan</button>
       <p class="calc__shared" id="share-status" role="status"></p>
-      <a class="btn btn--block" href="where-to-buy.html">Shop now</a>
+      <div class="calc__pick" id="pick" hidden>
+        <p class="calc__pick-label">Our pick for this plan</p>
+        <p class="calc__pick-name" id="pick-name"></p>
+        <p class="calc__pick-price" id="pick-price"></p>
+        <a class="btn btn--block" id="pick-buy" href="https://www.lazada.com.my/catalog/?q=ecoflow%20river%203%20plus" target="_blank" rel="noopener"><span id="pick-cta">Buy on Lazada</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <p class="calc__pick-alt"><a href="services.html#rentals">Not sure? Rent it for a weekend first (proposed)</a></p>
+      </div>
+      <a class="btn btn--block" id="shop-all" href="where-to-buy.html">Shop now</a>
     </aside>
   </div>
   <div class="wrap"><p class="note mt-l">How we calculate: River 3 Plus is rated at 286Wh. We assume about 85% is usable after conversion losses (around 243Wh). Device wattages are typical values, so check the label on yours for a closer estimate.</p></div>
@@ -163,7 +170,7 @@
   </div>
 </footer>
 <div class="consent-banner" id="consent-banner" role="region" aria-label="Analytics consent" hidden>
-  <p>Can we count visits with privacy-friendly analytics? It shows us which pages help. No ads, and we never sell data. <a href="privacy.html#cookies">How we use it</a></p>
+  <p>Can we count visits with privacy-friendly analytics?<span class="consent-more"> It shows us which pages help. No ads, and we never sell data.</span> <a href="privacy.html#cookies">How we use it</a></p>
   <div class="actions"><button class="btn btn--small" data-consent="allow" type="button">Allow</button><button class="btn btn--small btn--outline" data-consent="deny" type="button">No thanks</button></div>
 </div>
 <script src="assets/js/main.js" defer></script>
