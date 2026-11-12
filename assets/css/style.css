@@ -691,3 +691,20 @@ fieldset { border: 0; padding: 0; margin: 0; }
   .consent-banner .btn { padding: 8px 10px; font-size: .72rem; }
   .consent-more { display: none; }
 }
+
+/* Sample reviews on reviews.html (marked, not real buyers) */
+.sample-reviews { list-style: none; margin: 20px 0 0; padding: 20px 0 0; border-top: 1px solid var(--line); display: grid; gap: 16px; }
+.sample-review { background: var(--fog); border-radius: var(--r-md); padding: 16px 18px; }
+.sample-review__head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 0 0 6px; }
+.sample-review .stars { color: var(--orange-ink); letter-spacing: 2px; font-size: 1rem; }
+.sample-tag { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); border: 1px solid var(--line); background: var(--white); border-radius: 999px; padding: 2px 8px; }
+.sample-review blockquote { margin: 0; }
+.store .sample-review blockquote p { color: var(--black); margin: 0; }
+.store .sample-review__who { font-size: var(--fs-small); color: var(--muted); margin: 8px 0 0; }
+/* Line up the buttons and first reviews across the two store cards */
+@supports (grid-template-rows: subgrid) {
+  @media (min-width: 800px) {
+    .stores:has(.sample-reviews) .store { display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 8px; }
+    .stores:has(.sample-reviews) .store .btn { align-self: start; justify-self: start; margin-top: 0; }
+  }
+}
