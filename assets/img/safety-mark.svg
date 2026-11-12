@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="t">
+  <title id="t">Safety mark: look for the ST-SIRIM label</title>
+  <!-- Our own buyer-check seal. Not the official ST-SIRIM label, which only SIRIM may issue. -->
+  <defs><path id="ring" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/></defs>
+  <circle cx="100" cy="100" r="98" fill="#FF6B1A"/>
+  <circle cx="100" cy="100" r="68" fill="#101214"/>
+  <circle cx="100" cy="100" r="62" fill="none" stroke="#FF6B1A" stroke-width="1.5" stroke-dasharray="2 4"/>
+  <text font-family="'Barlow Condensed','Arial Narrow',Arial,sans-serif" font-weight="800" font-size="17" fill="#101214" letter-spacing="1">
+    <textPath href="#ring" textLength="500" lengthAdjust="spacing">SAFETY MARK ★ LOOK FOR THE LABEL ★ BUY AUTHORISED ★</textPath>
+  </text>
+  <g transform="translate(86 52) scale(1.15)" fill="none" stroke="#FF6B1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z"/><path d="m9 12 2 2 4-4"/>
+  </g>
+  <text x="100" y="115" text-anchor="middle" font-family="'Barlow Condensed','Arial Narrow',Arial,sans-serif" font-weight="800" font-size="27" fill="#FFFFFF" textLength="104" lengthAdjust="spacingAndGlyphs">ST-SIRIM</text>
+  <text x="100" y="136" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="700" font-size="10" fill="#A9B0B8" textLength="88" lengthAdjust="spacingAndGlyphs">CHECK ON DELIVERY</text>
+</svg>
