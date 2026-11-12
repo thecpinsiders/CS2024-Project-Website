@@ -1,16 +1,16 @@
 # River 3 Plus: "Stay a little longer"
 
-A 12-page campaign website (plus a PDPA privacy policy) for the EcoFlow River 3 Plus portable power station, by **Bluehour Studio**.
+A 14-page campaign website for the Malaysian market (plus a PDPA privacy policy) for the EcoFlow River 3 Plus portable power station, by **Bluehour Studio**.
 It's plain HTML, CSS and JavaScript with no build step, so it runs on GitHub Pages as-is.
 
-## The 12 pages
+## The 14 pages
 
 | # | File | Page | Job in the user journey |
 |---|------|------|-------------------------|
 | 1 | `index.html` | Home | Awareness: the emotional hook ("Stay a little longer") |
 | 2 | `river-3-plus.html` | Product | Consideration: features as benefits, with a sticky buy bar |
 | 3 | `specs.html` | Tech specs | Evaluation: every number, plus a comparison with a power bank and a generator |
-| 4 | `camping.html` | Moment: camping | Persona 1 (young families), Singapore campsite rules |
+| 4 | `camping.html` | Moment: camping | Persona 1 (young families), Malaysian campsites and road trips |
 | 5 | `work-anywhere.html` | Moment: work anywhere | Persona 2 (hybrid workers) |
 | 6 | `home-backup.html` | Moment: home backup | Persona 3 (peace of mind, UPS) |
 | 7 | `runtime-calculator.html` | Runtime calculator | Interactive tool that removes the "is it enough?" doubt |
@@ -19,14 +19,14 @@ It's plain HTML, CSS and JavaScript with no build step, so it runs on GitHub Pag
 | 10 | `where-to-buy.html` | Where to buy | Conversion: hands off to Lazada and Shopee |
 | 11 | `get-the-kit.html` | **Form (CTA)** | Lead capture with PDPA notice and separate marketing consent |
 | 12 | `team.html` | Team | Group number, the four members and their emails |
-| + | `privacy.html` | Privacy policy | PDPA policy (not counted in the 12) |
+| 13 | `reviews.html` | Reviews | Trust: four sample testimonials, clearly labelled, plus links to real marketplace ratings |
+| 14 | `services.html` | Care, rentals and trade-in | Proposed revenue streams: protection plan, rentals (incl. pasar malam stall kits), bundles, trade-in |
+| + | `privacy.html` | Privacy policy | Malaysia PDPA 2010 policy with a Bahasa Malaysia summary (not counted in the 14) |
 | + | `404.html` | Not found | GitHub Pages error page |
 
-## Before you submit: edit these
+## Team details
 
-1. **`team.html`**: replace `Group [No.]`, `[TXX]`, each `[Role to confirm]`, the one-line descriptions and `[email to be added]` for Geng Quan, Jemond, Ryan and Martin.
-2. **`get-the-kit.html` and `privacy.html`**: replace `[team email to be added]` with the team's contact email.
-3. **Footer**: optionally add your course code to the disclaimer.
+`team.html` lists Group X, tutorial group T1, and each member's name and email. The site's contact address (in `get-the-kit.html` and `privacy.html`) is the demo address `dpo@bluehourstudio.sg`. To use the real group number, change it in `team.html` and on slides 1 and 18 of the pitch deck.
 
 The site address is already set to `https://thecpinsiders.github.io/CS2024-Project-Website/` in every canonical tag, social-preview tag, `sitemap.xml` and `robots.txt`. If the address changes, find-and-replace that one string.
 

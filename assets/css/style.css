@@ -126,6 +126,12 @@ strong { font-weight: 600; }
   .nav__list { display: flex; }
   .site-header .nav__cta { display: inline-flex; }
   .menu-toggle, .mobile-menu { display: none !important; }
+  .nav__list a, .nav__trigger, .nav__cta { white-space: nowrap; }
+}
+/* 8 header items: tighten spacing until there's room */
+@media (min-width: 1080px) and (max-width: 1239px) {
+  .nav { gap: 12px; }
+  .nav__list a, .nav__trigger { padding-inline: 9px; }
 }
 
 /* 5. Buttons + badges ------------------------------------------------------ */
@@ -632,3 +638,18 @@ fieldset { border: 0; padding: 0; margin: 0; }
   .chip { min-height: 44px; }
   .stepper button { width: 44px; height: 44px; }
 }
+
+/* Safety mark (where-to-buy.html#safety-mark) */
+.safety-mark__seal { width: 72px; height: 72px; border-radius: 50%; background: var(--orange); color: var(--black); display: grid; place-items: center; margin-bottom: 16px; }
+.safety-mark__seal svg { width: 36px; height: 36px; }
+.safety-mark__eyebrow { font: 700 .75rem/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+
+/* Reviews (reviews.html) */
+.reviews { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
+@media (min-width: 760px) { .reviews { grid-template-columns: repeat(2, 1fr); } }
+.review { margin: 0; height: 100%; display: flex; flex-direction: column; gap: 14px; background: var(--white); border: 1px solid var(--line); border-radius: var(--r-lg); padding: clamp(24px, 3vw, 32px); }
+.review blockquote { margin: 0; font-size: var(--fs-lead); line-height: 1.45; }
+.review figcaption { margin-top: auto; color: var(--muted); font-size: var(--fs-small); }
+.review figcaption strong { display: block; color: var(--black); font-size: var(--fs-body); }
+.stars { color: var(--orange-ink); letter-spacing: .12em; margin: 0; }
+.nowrap { white-space: nowrap; }

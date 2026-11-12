@@ -43,3 +43,6 @@ build/
 .cache/
 *.log
 npm-debug.log*
+
+# Office lock files (created while a document is open)
+~$*

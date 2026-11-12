@@ -222,7 +222,7 @@
       mobile: function (v) {
         var s = v.replace(/\s|-/g, "");
         if (!s) return "";
-        return /^(\+65)?[689]\d{7}$/.test(s) ? "" : "Enter an 8-digit Singapore number, or leave it blank.";
+        return /^(\+?60|0)1\d{8,9}$/.test(s) ? "" : "Enter a Malaysian mobile number like 012-345 6789, or leave it blank.";
       },
       moment: function () { return form.querySelector('[name="moment"]:checked') ? "" : "Pick the moment that sounds most like you."; },
       consent: function () { return form.querySelector('[name="consent"]').checked ? "" : "We need your consent to use your details for this request."; }
