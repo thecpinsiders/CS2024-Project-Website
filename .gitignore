@@ -15,6 +15,12 @@ CLAUDE.local.md
 PRODUCT.md
 DESIGN.md
 
+# Internal team notes (not for the public site)
+HANDOFF.md
+HANDOVER.md
+*.local.md
+notes/
+
 # Secrets and credentials
 .env
 .env.*

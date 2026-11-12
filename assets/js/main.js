@@ -153,9 +153,9 @@
     /* The result ends with a pick: the smallest kit that covers the plan.
        Prices from EcoFlow Malaysia, checked 12 Nov 2026 (River 3 Plus RM 2,099, extra battery RM 900). */
     var PICKS = [
-      { upTo: USABLE, name: "Essential: River 3 Plus", price: "From RM 2,099 at EcoFlow Malaysia, checked 12 Nov 2026", q: "ecoflow river 3 plus" },
-      { upTo: 572 * EFFICIENCY, name: "Long weekend: River 3 Plus + extra battery", price: "About RM 2,999 (RM 2,099 + RM 900 battery), checked 12 Nov 2026. On sunny trips, the Explorer kit with a 110W panel (RM 2,799) also works.", q: "ecoflow river 3 plus extra battery" },
-      { upTo: 858 * EFFICIENCY, name: "River 3 Plus + 2 extra batteries", price: "About RM 3,899 for 858Wh, checked 12 Nov 2026", q: "ecoflow river 3 plus extra battery" }
+      { upTo: USABLE, name: "Essential: River 3 Plus", price: "From RM 2,099 at EcoFlow Malaysia, checked 12 Nov 2026", href: "https://www.lazada.com.my/products/pdp-i4498527147.html" },
+      { upTo: 572 * EFFICIENCY, name: "Long weekend: River 3 Plus + extra battery", price: "About RM 2,999 (RM 2,099 + RM 900 battery), checked 12 Nov 2026. On sunny trips, the Explorer kit with a 110W panel (RM 2,799) also works.", href: "https://www.lazada.com.my/products/pdp-i4593435328.html" },
+      { upTo: 858 * EFFICIENCY, name: "River 3 Plus + 2 extra batteries", price: "About RM 3,899 for 858Wh, checked 12 Nov 2026", href: "https://www.lazada.com.my/shop/ecoflow-official-store/" }
     ];
     var pickBox = document.getElementById("pick");
     var showPick = function (wh, w) {
@@ -171,11 +171,11 @@
       if (w > 1200 || !p) {
         name.textContent = "Bigger than River 3 Plus";
         price.textContent = w > 1200 ? "That load is above even X-Boost's 1200 W. Look at a larger EcoFlow station." : "That's more than 858Wh. Look at a larger EcoFlow station, or split the plan over two days.";
-        buy.href = "https://www.lazada.com.my/catalog/?q=ecoflow%20delta%20power%20station"; cta.textContent = "See larger stations on Lazada";
+        buy.href = "https://www.lazada.com.my/shop/ecoflow-official-store/"; cta.textContent = "See larger stations on Lazada";
         return;
       }
       name.textContent = p.name; price.textContent = p.price;
-      buy.href = "https://www.lazada.com.my/catalog/?q=" + encodeURIComponent(p.q); cta.textContent = "Buy on Lazada";
+      buy.href = p.href; cta.textContent = "Buy on Lazada";
     };
 
     /* The plan lives in the page address (?h=router-6,laptop-1.5) so it can be shared */
